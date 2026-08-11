@@ -1113,7 +1113,7 @@ class Shape:
             self.rax.yaxis.set_label_coords(-0.075, 1)
             self.rax.tick_params(axis='x', labelsize=self.style.fontsize)
             self.rax.tick_params(axis='y', labelsize=self.style.fontsize)
-            self.rax.set_ylim((0.5, 1.5))
+            self.rax.set_ylim((self.style.ratio_axis["y_lower"], self.style.ratio_axis["y_upper"]))
 
         if self.style.has_labels or self.style.has_signal_samples:
             labels_new = []
