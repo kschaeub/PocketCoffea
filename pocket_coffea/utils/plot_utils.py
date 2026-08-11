@@ -1036,7 +1036,7 @@ class Shape:
                     ax=self.ax,
                 )
         if self.toplabel:
-            hep.cms.lumitext(
+            hep.cms.text(
                 text=self.toplabel,
                 fontsize=self.style.fontsize,
                 ax=self.ax,
@@ -1800,7 +1800,7 @@ class SystUnc:
             ax=self.ax,
         )
         if toplabel:
-            hep.cms.lumitext(
+            hep.cms.text(
                 text=toplabel,
                 fontsize=self.style.fontsize,
                 ax=self.ax,
