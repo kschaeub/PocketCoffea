@@ -815,6 +815,9 @@ class BaseProcessorABC(processor.ProcessorABC, ABC):
         #########################
         # Customization point for derived workflows before skimming
         self.process_extra_before_skim()
+        if "preskim" in self.workflow_options and self.workflow_options["preskim"] is not None:
+            return self.output 
+            
         # MET filter, lumimask, + custom skimming function
         self.skim_events()
         if not self.has_events:
