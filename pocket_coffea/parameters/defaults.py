@@ -103,6 +103,7 @@ def get_default_parameters(group_tags: dict = None) -> OmegaConf:
     jet_scale_factors = OmegaConf.load(os.path.join(basedir, 'jet_scale_factors.yaml'))
     met_calibration = OmegaConf.load(os.path.join(basedir, "met_calibration.yaml"))
     btagging = OmegaConf.load(os.path.join(basedir, "btagging.yaml"))
+    tagging_2D = OmegaConf.load(os.path.join(basedir, "jet_tagging2D.json"))
     lepton_scale_factors = OmegaConf.load(
         os.path.join(basedir, 'lepton_scale_factors.yaml')
     )
@@ -120,6 +121,7 @@ def get_default_parameters(group_tags: dict = None) -> OmegaConf:
         jet_scale_factors,
         met_calibration,
         btagging,
+        tagging_2D,
         lepton_scale_factors,
         photon_sf,
         met_xy,
