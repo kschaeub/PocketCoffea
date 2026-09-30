@@ -817,6 +817,10 @@ class BaseProcessorABC(processor.ProcessorABC, ABC):
         self.process_extra_before_skim()
         if "preskim" in self.workflow_options and self.workflow_options["preskim"] is not None:
             return self.output 
+        elif "stitch" in self.workflow_options and self.workflow_options["stitch"] is not None:
+            return self.output
+        elif "plot_stitch" in self.workflow_options and self.workflow_options["plot_stitch"]:
+            return self.output
             
         # MET filter, lumimask, + custom skimming function
         self.skim_events()
