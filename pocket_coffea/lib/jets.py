@@ -495,6 +495,10 @@ def get_btag_wp_score(params, year, wp, tagger):
         )
     return float(cset[corr_name].evaluate(wp))
 
+def flavtagging2D(Jet, btag, wp=None, veto=False):
+    tagger = btag["btagging_algorithm"]
+    print("Tagger: ", tagger)
+
 
 def get_btag_working_point(params, year, wp="L", tagger=None):
     """Resolve the b-tag discriminant branch and its working-point cut.

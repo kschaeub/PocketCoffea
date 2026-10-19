@@ -637,6 +637,11 @@ def sf_ctag_calib(params, dataset, year, njets, jetsHt):
 
     return w
 
+def sf_flavtag2D(params, dataset, year, njets, variations=["central"]):
+    flavtag2dSF = params.jet_scale_factors.flavtag2DSF[year]
+    flavtagger2D = params.flavtagging2D.working_point[year]["tagger"]
+    cset = load_correction_set(flavtag2dSF.SF_file)
+
 
 def sf_jet_puId(params, jets, year, njets):
     # The SF is applied only on jets passing the preselection (JetGood), pt < maxpt, and matched to a GenJet.
