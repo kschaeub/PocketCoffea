@@ -9,6 +9,7 @@ jet_scale_factors:
     jet_collection:
       btag: JetGood
       ctag: JetGood
+      flavtag2D: JetGood
       puId: JetGood
       
     btagSF:
@@ -91,7 +92,7 @@ jet_scale_factors:
 
     flavtag2DSF:
         "2024": 
-            file: "/eos/cms/store/group/phys_top/Run3Vcb/flavTagSFs/20260818/flavTaggingSF_2025.json.gz"   
+            SF_file: "root://eoscms.cern.ch//eos/cms/store/group/phys_top/Run3Vcb/flavTagSFs/20260629/flavTaggingSF_2024.json.gz"   
             name: "UParTAK4_pseudocontinuous"  
       
     jet_puId:
